@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- media css -->
+    <link rel="stylesheet" href="css/media.css">
+
+    <title>Jquery wow.js plugin 3</title>
+  </head>
+  <body>
+    <section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s" style="background-color: red"></section>
+    <section class="wow slideInRight" data-wow-offset="10"  data-wow-iteration="10" style="background-color: green"></section>
+
+    <!-- jquery links -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      var wow = new WOW({
+        boxClass:     'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset:       0,          // distance to the element when triggering the animation (default is 0)
+        mobile:       true,       // trigger animations on mobile devices (default is true)
+        live:         true,       // act on asynchronously loaded content (default is true)
+        callback:     function(box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null,    // optional scroll container selector, otherwise use window,
+        resetAnimation: true,     // reset animation on end (default is true)
+      });
+      wow.init();
+    </script>
+  </body>
+</html>
